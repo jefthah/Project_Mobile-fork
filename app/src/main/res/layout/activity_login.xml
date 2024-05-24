@@ -12,7 +12,7 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UPNVJ Healthcare"
+        android:text="UPNVJ"
         android:textColor="@color/blue_200"
         android:textSize="34sp"
         android:textStyle="bold"
