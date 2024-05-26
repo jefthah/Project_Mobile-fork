@@ -8,11 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -24,10 +20,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        edUsername = findViewById(R.id.editTextRegisterUsername);
-        edPassword = findViewById(R.id.editTextRegisterPassword);
+        edUsername = findViewById(R.id.editTextAppFullName);
+        edPassword = findViewById(R.id.editTextAppContactNumber);
         edConfirm = findViewById(R.id.editTextRegisterConfirmPassword);
-        edEmail = findViewById(R.id.editTextEmail);
+        edEmail = findViewById(R.id.editTextAppAddress);
         btn = findViewById(R.id.buttonRegister);
         tv = findViewById(R.id.textViewExistingUser);
 
@@ -45,12 +41,14 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = edPassword.getText().toString();
                 String confirm = edConfirm.getText().toString();
                 String email = edEmail.getText().toString();
+                Database db = new Database(getApplicationContext(), "healthcare", null, 1);
                 if(username.length()==0 || password.length()==0 || confirm.length()==0 || email.length()==0) {
                     Toast.makeText(getApplicationContext(),"Please fill all the details",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if(password.compareTo(confirm)==0){
                         if(isValid(password)) {
+                            db.register(username, email, password);
                             Toast.makeText(getApplicationContext(), "Data berhasil didaftarkan", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         }else{
@@ -74,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
             for (int r = 0; r < passwordhere.length(); r++) {
-                if (Character.isLetter(passwordhere.charAt(r))) {
+                if (Character.isDigit(passwordhere.charAt(r))) {
                     f2=1;
                 }
             }
