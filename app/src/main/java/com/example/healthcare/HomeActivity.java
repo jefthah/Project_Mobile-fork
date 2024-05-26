@@ -10,9 +10,6 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -24,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username", "").toString();
-        Toast.makeText(getApplicationContext(), "Selamat datang"+username, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Selamat datang " + username, Toast.LENGTH_SHORT).show();
 
         CardView exit = findViewById(R.id.cardExit);
         exit.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +39,17 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, FindDoctorActivity.class));
+            }
+        });
+
+        // Menambahkan kode untuk membuka EditProfileActivity
+        CardView editProfile = findViewById(R.id.cardEditProfile);
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent editIntent = new Intent(HomeActivity.this, EditProfileActivity.class);
+                editIntent.putExtra("username", username);
+                startActivity(editIntent);
             }
         });
     }

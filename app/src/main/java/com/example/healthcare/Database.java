@@ -1,10 +1,13 @@
 package com.example.healthcare;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -47,4 +50,27 @@ public class Database extends SQLiteOpenHelper {
         }
         return result;
     }
+    public void updateProfile(String username, String newEmail, String newPassword) {
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            ContentValues cv = new ContentValues();
+            cv.put("email", newEmail);
+            cv.put("password", newPassword);
+            db.update("users", cv, "username=?", new String[]{username});
+            db.close();
+        } catch (Exception e) {
+            Log.e(TAG, "updateProfile: ", e);
+        }
+    }
+
+    public void deleteAccount(String username) {
+        try {
+            SQLiteDatabase db = getWritableDatabase();
+            db.delete("users", "username=?", new String[]{username});
+            db.close();
+        } catch (Exception e) {
+            Log.e(TAG, "deleteAccount: ", e);
+        }
+    }
+
 }
