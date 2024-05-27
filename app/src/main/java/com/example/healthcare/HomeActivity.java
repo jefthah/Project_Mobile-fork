@@ -42,6 +42,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        CardView labTest = findViewById(R.id.cardLabTest);
+        labTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,LabTestActivity.class));
+            }
+        });
+
         // Menambahkan kode untuk membuka EditProfileActivity
         CardView editProfile = findViewById(R.id.cardEditProfile);
         editProfile.setOnClickListener(new View.OnClickListener() {
@@ -52,5 +60,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(editIntent);
             }
         });
+
     }
 }
