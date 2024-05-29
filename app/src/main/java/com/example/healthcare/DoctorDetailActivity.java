@@ -73,7 +73,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_doctor_detail);
 
-        tv = findViewById(R.id.textViewDDTitle);
+        tv = findViewById(R.id.textViewODTitle);
         btn = findViewById(R.id.buttonLTBack);
 
         Intent it = getIntent();
@@ -116,7 +116,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
                 new int[]{R.id.line_a, R.id.line_b, R.id.line_c,R.id.line_d, R.id.line_e}
         );
 
-        ListView lst = findViewById(R.id.listViewLT);
+        ListView lst = findViewById(R.id.listViewOD);
         lst.setAdapter(sa);
 
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {

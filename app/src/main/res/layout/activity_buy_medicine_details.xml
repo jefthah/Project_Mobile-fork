@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1"
-    tools:context=".LabTestDetailsActivity">
+    android:background="@drawable/background2"
+    tools:context=".BuyMedicineDetailsActivity">
 
     <TextView
         android:id="@+id/textViewODName"
@@ -36,21 +36,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewODName"
         app:layout_constraintVertical_bias="0.01999998" />
 
+
     <TextView
         android:id="@+id/textViewBMCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lab Test and Packages"
+        android:text="Beli Obat"
         android:textColor="@color/yellowLight"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewODName"
-        app:layout_constraintVertical_bias="0.074" />
-
+        app:layout_constraintVertical_bias="0.071" />
 
     <EditText
         android:id="@+id/editTextBMDTextMultiLine"
@@ -70,7 +69,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textViewLDTotalCost"
+        android:id="@+id/textViewBMDTotalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -79,13 +78,12 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewODName"
         app:layout_constraintVertical_bias="0.794" />
 
     <Button
-        android:id="@+id/buttonBMCartCheckout"
+        android:id="@+id/buttonBMDAddToCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
@@ -105,5 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

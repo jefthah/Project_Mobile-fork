@@ -9,7 +9,7 @@
     tools:context=".LabTestActivity">
 
     <TextView
-        android:id="@+id/textViewDDName"
+        android:id="@+id/textViewODName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UPN Sehat"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
-        android:id="@+id/textViewDDTitle"
+        android:id="@+id/textViewODTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deliver Location : Jakarta"
@@ -33,11 +33,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewODName"
         app:layout_constraintVertical_bias="0.01999998" />
 
     <TextView
-        android:id="@+id/textViewLDPackageName"
+        android:id="@+id/textViewBMCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab Test and Packages"
@@ -48,11 +48,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewODName"
         app:layout_constraintVertical_bias="0.074" />
 
     <ListView
-        android:id="@+id/listViewLT"
+        android:id="@+id/listViewOD"
         android:layout_width="307dp"
         android:layout_height="510dp"
         android:layout_margin="10dp"
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewODTitle"
         app:layout_constraintVertical_bias="0.243" />
 
     <Button

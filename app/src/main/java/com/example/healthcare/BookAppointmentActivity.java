@@ -3,7 +3,6 @@ package com.example.healthcare;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +14,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
 
@@ -35,12 +31,12 @@ public class BookAppointmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_appointment);
 
         // Inisialisasi TextView dan EditText
-        tv = findViewById(R.id.textViewAppTitle);
-        ed1 = findViewById(R.id.editTextAppFullName);
-        ed2 = findViewById(R.id.editTextAppAddress);
-        ed3 = findViewById(R.id.editTextAppContactNumber);
+        tv = findViewById(R.id.textViewLTBInfo);
+        ed1 = findViewById(R.id.editTextLTBFullName);
+        ed2 = findViewById(R.id.editTextLTBAddress);
+        ed3 = findViewById(R.id.editTextLTBpincode);
         ed4 = findViewById(R.id.editTextAppFees);
-        dateButton = findViewById(R.id.buttonAppDate);
+        dateButton = findViewById(R.id.buttonCartTime);
         timeButton = findViewById(R.id.buttonAppTime);
         btnBook = findViewById(R.id.buttonBookAppointment);
         btnBack = findViewById(R.id.buttonAppBack);

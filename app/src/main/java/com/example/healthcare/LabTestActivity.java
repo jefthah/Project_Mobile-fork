@@ -10,9 +10,6 @@ import android.widget.SimpleAdapter;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,11 +17,11 @@ import java.util.HashMap;
 public class LabTestActivity extends AppCompatActivity {
 
     private String[][] packages = {
-            {"Package 1 : Full Body Checkup", "", "", "", "999"},
-            {"Package 2 : Blood Glucose Fasting", "", "", "", "299"},
-            {"Package 3 : Covid-19 Antibody - IgG", "", "", "", "899"},
-            {"Package 4 : Thyroid Check", "", "", "", "499"},
-            {"Package 5 : Immunity Check", "", "", "", "999"}
+            {"Package 1 : Full Body Checkup", "", "", "", "193761"},
+            {"Package 2 : Blood Glucose Fasting", "", "", "", "57992"},
+            {"Package 3 : Covid-19 Antibody - IgG", "", "", "", "174366"},
+            {"Package 4 : Thyroid Check", "", "", "", "96783"},
+            {"Package 5 : Immunity Check", "", "", "", "193761"}
     };
 
     private String[] package_details = {
@@ -49,7 +46,7 @@ public class LabTestActivity extends AppCompatActivity {
 
         btnGoToCart = findViewById(R.id.buttonLTGoToCart);
         btnBack = findViewById(R.id.buttonLTBack);
-        listView = findViewById(R.id.listViewLT);
+        listView = findViewById(R.id.listViewOD);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +79,13 @@ public class LabTestActivity extends AppCompatActivity {
                 it.putExtra("text2", package_details[i]);
                 it.putExtra("text3", packages[i][4]);
                 startActivity(it);
+            }
+        });
+
+        btnGoToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LabTestActivity.this,CartLabActivity.class));
             }
         });
     }
