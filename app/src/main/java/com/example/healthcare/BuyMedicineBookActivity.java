@@ -9,17 +9,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
-public class LabTestBookActivity extends AppCompatActivity {
-
+public class BuyMedicineBookActivity extends AppCompatActivity {
     EditText edname,edaddress,edcontact,edpincode;
     Button btnBooking;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lab_test_book);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_buy_medicine_book);
 
         edname = findViewById(R.id.editTextBMBFullName);
         edaddress = findViewById(R.id.editTextBMBAddress);
@@ -30,7 +34,7 @@ public class LabTestBookActivity extends AppCompatActivity {
         Intent intent=getIntent();
         String[] price = intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
         String date = intent.getStringExtra("date");
-        String time = intent.getStringExtra("time");
+        // String time = intent.getStringExtra("time");
 
         btnBooking.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,11 +42,18 @@ public class LabTestBookActivity extends AppCompatActivity {
                 SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                 String username = sharedpreferences.getString("username","").toString();
                 Database db = new Database(getApplicationContext(), "healthcare", null, 1);
-                db.addOrder(username,edname.getText().toString(),edaddress.getText().toString(),edcontact.getText().toString(),Integer.parseInt(edpincode.getText().toString()),date.toString(),time.toString(),Float.parseFloat(price[1].toString()),"lab");
-                db.removeCart(username,"lab");
+                db.addOrder(username,edname.getText().toString(),edaddress.getText().toString(),edcontact.getText().toString(),Integer.parseInt(edpincode.getText().toString()),date.toString(),"",Float.parseFloat(price[1].toString()),"medicine");
+                db.removeCart(username,"medicine");
                 Toast.makeText(getApplicationContext(), "Pemesanan berhasil!", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(LabTestBookActivity.this,HomeActivity.class));
+                startActivity(new Intent(BuyMedicineBookActivity.this,HomeActivity.class));
             }
+        });
+
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
     }
 }

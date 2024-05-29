@@ -39,8 +39,8 @@ public class CartLabActivity extends AppCompatActivity {
 
         dateButton = findViewById(R.id.buttonBMCartDate);
         timeButton = findViewById(R.id.buttonCartTime);
-        btnCheckout = findViewById(R.id.buttonCartCheckout);
-        btnBack = findViewById(R.id.buttonCartBack);
+        btnCheckout = findViewById(R.id.buttonBMCartCheckout);
+        btnBack = findViewById(R.id.buttonBMCartBack);
         tvTotal = findViewById(R.id.textViewBMCartTotalCost);
         lst = findViewById(R.id.listViewBMCart);
 

@@ -70,7 +70,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/buttonCartCheckout"
+        android:id="@+id/buttonBMCartCheckout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
@@ -81,7 +81,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonCartBack"
+        android:id="@+id/buttonBMCartBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"

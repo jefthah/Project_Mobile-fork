@@ -22,7 +22,7 @@
         android:layout_marginTop="100dp" />
 
     <TextView
-        android:id="@+id/textViewLTBInfo"
+        android:id="@+id/textViewBMBPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="dimohon untuk mengisi seluruh detail pemesanan"
@@ -36,7 +36,7 @@
     <!-- Email Label -->
 
     <EditText
-        android:id="@+id/editTextLTBFullName"
+        android:id="@+id/editTextBMBFullName"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
@@ -55,14 +55,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLTBInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName" />
 
     <!-- Email Input -->
 
     <!-- Password Label -->
 
     <EditText
-        android:id="@+id/editTextLTBAddress"
+        android:id="@+id/editTextBMBAddress"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -82,13 +82,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBFullName" />
 
     <!-- Password Input -->
 
     <!-- Confirm Password Label -->
     <EditText
-        android:id="@+id/editTextLTBpincode"
+        android:id="@+id/editTextBMBpincode"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -107,12 +107,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBAddress" />
 
     <!-- Confirm Password Input -->
 
     <EditText
-        android:id="@+id/editTextLTBContactNumber"
+        android:id="@+id/editTextBMBContactNumber"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -132,10 +132,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBpincode" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBpincode" />
 
     <Button
-        android:id="@+id/buttonBookingLTB"
+        android:id="@+id/buttonBMBBooking"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
@@ -144,6 +144,6 @@
         android:text="PESAN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBContactNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBContactNumber" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

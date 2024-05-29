@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLTBInfo"
+        android:id="@+id/textViewBMBPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -79,13 +79,13 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLTBInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName"
         android:layout_marginTop="50dp"
         android:layout_marginStart="20dp" />
 
     <!-- Username Input -->
     <EditText
-        android:id="@+id/editTextLTBFullName"
+        android:id="@+id/editTextBMBFullName"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -116,11 +116,11 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBFullName" />
 
     <!-- Email Input -->
     <EditText
-        android:id="@+id/editTextLTBAddress"
+        android:id="@+id/editTextBMBAddress"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -150,13 +150,13 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBAddress"
         android:layout_marginTop="16dp"
         android:layout_marginStart="20dp" />
 
     <!-- Password Input -->
     <EditText
-        android:id="@+id/editTextLTBpincode"
+        android:id="@+id/editTextBMBpincode"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -186,7 +186,7 @@
         android:textSize="16sp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBpincode"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBpincode"
         android:layout_marginStart="16dp" />
 
     <!-- Confirm Password Input -->
