@@ -17,11 +17,11 @@ import java.util.HashMap;
 public class LabTestActivity extends AppCompatActivity {
 
     private String[][] packages = {
-            {"Package 1 : Full Body Checkup", "", "", "", "999"},
-            {"Package 2 : Blood Glucose Fasting", "", "", "", "299"},
-            {"Package 3 : Covid-19 Antibody - IgG", "", "", "", "899"},
-            {"Package 4 : Thyroid Check", "", "", "", "499"},
-            {"Package 5 : Immunity Check", "", "", "", "999"}
+            {"Package 1 : Full Body Checkup", "", "", "", "193761"},
+            {"Package 2 : Blood Glucose Fasting", "", "", "", "57992"},
+            {"Package 3 : Covid-19 Antibody - IgG", "", "", "", "174366"},
+            {"Package 4 : Thyroid Check", "", "", "", "96783"},
+            {"Package 5 : Immunity Check", "", "", "", "193761"}
     };
 
     private String[] package_details = {

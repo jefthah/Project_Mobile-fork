@@ -20,15 +20,15 @@ import java.util.HashMap;
 public class BuyMedicineActivity extends AppCompatActivity {
 
     private String[][] packages = {
-            {"Uprise-03 1000IU Capsule", "", "", "","500"},
-            {"Healthvit Chromium Picolinate 200mcg Capsule", "", "", "", "305"},
-            {"Vitamin B Complex Capsules", "", "", "", "448"},
-            {"Inlife Vitamin E Wheat Germ Oil Capsule", "", "", "", "539"},
-            {"Dolo 650 Tablet", "", "", "", "30"},
-            {"Crocin 650 Advance Tablet", "", "", "", "50"},
-            {"Strepsils Medicated Lozenges for Sore Throat", "", "", "", "40"},
-            {"Tata 1mg Calcium + Vitamin D3", "", "", "", "305"},
-            {"Feronia -XT Tablet", "", "", "", "130"}
+            {"Uprise-03 1000IU Capsule", "", "", "","96977"},
+            {"Healthvit Chromium Picolinate 200mcg Capsule", "", "", "", "59156"},
+            {"Vitamin B Complex Capsules", "", "", "", "86892"},
+            {"Inlife Vitamin E Wheat Germ Oil Capsule", "", "", "", "104542"},
+            {"Dolo 650 Tablet", "", "", "", "5818"},
+            {"Crocin 650 Advance Tablet", "", "", "", "9697"},
+            {"Strepsils Medicated Lozenges for Sore Throat", "", "", "", "7758"},
+            {"Tata 1mg Calcium + Vitamin D3", "", "", "", "59156"},
+            {"Feronia -XT Tablet", "", "", "", "25214"}
     };
 
     private String[] package_details = {
