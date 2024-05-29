@@ -17,11 +17,11 @@
         android:text="10:00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBMCartTotalCost"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewBMCartTotalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextAppFees" />
 
     <TextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/textViewLTBTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewAppTitle"
+        android:id="@+id/textViewLTBInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -68,7 +68,7 @@
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLTBTitle" />
 
     <!-- Username Label -->
     <TextView
@@ -79,13 +79,13 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLTBInfo"
         android:layout_marginTop="50dp"
         android:layout_marginStart="20dp" />
 
     <!-- Username Input -->
     <EditText
-        android:id="@+id/editTextAppFullName"
+        android:id="@+id/editTextLTBFullName"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -116,11 +116,11 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBFullName" />
 
     <!-- Email Input -->
     <EditText
-        android:id="@+id/editTextAppAddress"
+        android:id="@+id/editTextLTBAddress"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -150,13 +150,13 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBAddress"
         android:layout_marginTop="16dp"
         android:layout_marginStart="20dp" />
 
     <!-- Password Input -->
     <EditText
-        android:id="@+id/editTextAppContactNumber"
+        android:id="@+id/editTextLTBpincode"
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
@@ -186,7 +186,7 @@
         android:textSize="16sp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBpincode"
         android:layout_marginStart="16dp" />
 
     <!-- Confirm Password Input -->
@@ -237,7 +237,7 @@
         tools:layout_editor_absoluteX="46dp" />
 
     <Button
-        android:id="@+id/buttonAppDate"
+        android:id="@+id/buttonCartTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
