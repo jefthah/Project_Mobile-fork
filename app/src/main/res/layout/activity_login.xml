@@ -9,7 +9,7 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/textViewLTBTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UPN Sehat"
@@ -32,7 +32,7 @@
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLTBTitle"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="20dp"
         app:layout_constraintVertical_bias="0.322" />

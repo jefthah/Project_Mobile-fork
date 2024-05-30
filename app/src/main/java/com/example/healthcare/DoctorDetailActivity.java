@@ -11,9 +11,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -76,8 +73,8 @@ public class DoctorDetailActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_doctor_detail);
 
-        tv = findViewById(R.id.textViewDDTitle);
-        btn = findViewById(R.id.buttonDDBack);
+        tv = findViewById(R.id.textViewODTitle);
+        btn = findViewById(R.id.buttonLTBack);
 
         Intent it = getIntent();
         String title = it.getStringExtra("title");
@@ -119,7 +116,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
                 new int[]{R.id.line_a, R.id.line_b, R.id.line_c,R.id.line_d, R.id.line_e}
         );
 
-        ListView lst = findViewById(R.id.listViewDD);
+        ListView lst = findViewById(R.id.listViewOD);
         lst.setAdapter(sa);
 
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
