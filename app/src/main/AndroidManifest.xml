@@ -15,15 +15,6 @@
         android:theme="@style/Theme.Healthcare"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-=======
-            android:name=".HealthArticlesDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HealthArticlesActivity"
-            android:exported="false" />
-        <activity
->>>>>>> upstream/main
             android:name=".BuyMedicineBookActivity"
             android:exported="false" />
         <activity
@@ -36,7 +27,6 @@
             android:name=".BuyMedicineActivity"
             android:exported="false" />
         <activity
-<<<<<<< HEAD
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -46,8 +36,6 @@
             </intent-filter>
         </activity>
         <activity
-=======
->>>>>>> upstream/main
             android:name=".OrderDetailsActivity"
             android:exported="false" />
         <activity
