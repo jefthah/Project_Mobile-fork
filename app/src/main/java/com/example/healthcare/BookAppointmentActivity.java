@@ -3,8 +3,9 @@ package com.example.healthcare;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,12 +13,10 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
 
@@ -27,8 +26,12 @@ public class BookAppointmentActivity extends AppCompatActivity {
     TextView tv;
     private DatePickerDialog datePickerDialog;
     private TimePickerDialog timePickerDialog;
+<<<<<<< HEAD
     private Button dateButton, timeButton, btnBook, btnBack;
 
+=======
+    private Button dateButton, timeButton, btnBook,btnBack;
+>>>>>>> upstream/main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,14 +39,18 @@ public class BookAppointmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_appointment);
 
         // Inisialisasi TextView dan EditText
-        tv = findViewById(R.id.textViewAppTitle);
-        ed1 = findViewById(R.id.editTextAppFullName);
-        ed2 = findViewById(R.id.editTextAppAddress);
-        ed3 = findViewById(R.id.editTextAppContactNumber);
+        tv = findViewById(R.id.textViewBMBPackageName);
+        ed1 = findViewById(R.id.editTextBMBFullName);
+        ed2 = findViewById(R.id.editTextBMBAddress);
+        ed3 = findViewById(R.id.editTextBMBpincode);
         ed4 = findViewById(R.id.editTextAppFees);
-        dateButton = findViewById(R.id.buttonAppDate);
+        dateButton = findViewById(R.id.buttonCartTime);
         timeButton = findViewById(R.id.buttonAppTime);
+<<<<<<< HEAD
         btnBook= findViewById(R.id.buttonBookAppointment);
+=======
+        btnBook = findViewById(R.id.buttonBookAppointment);
+>>>>>>> upstream/main
         btnBack = findViewById(R.id.buttonAppBack);
 
         // Mengatur EditText agar tidak bisa diedit
@@ -85,15 +92,36 @@ public class BookAppointmentActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
+<<<<<<< HEAD
             public void onClick(View view) {
                 startActivity(new Intent(BookAppointmentActivity.this, FindDoctorActivity.class));
+=======
+            public void onClick(View v) {
+                startActivity(new Intent(BookAppointmentActivity.this,FindDoctorActivity.class));
+>>>>>>> upstream/main
             }
         });
 
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
+<<<<<<< HEAD
             public void onClick(View view) {
 
+=======
+            public void onClick(View v) {
+                Database db = new Database(getApplicationContext(), "healthcare", null, 1);
+                SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+                String username = sharedpreferences.getString("username", "").toString();
+
+                if(db.checkAppointmentExists(username,title+" => "+fullname,address,contact,dateButton.getText().toString(),timeButton.getText().toString())==1) {
+                    Toast.makeText(getApplicationContext(),"Appointment already booked",Toast.LENGTH_LONG).show();
+                }else{
+                    float feeAmount = Float.parseFloat(fees.replaceAll("[^\\d.]", ""));
+                    db.addOrder(username,title+" => "+fullname,address,contact,0,dateButton.getText().toString(),timeButton.getText().toString(),feeAmount, "appointment");
+                    Toast.makeText(getApplicationContext(), "Your appointment is done successfully", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(BookAppointmentActivity.this,HomeActivity.class));
+                }
+>>>>>>> upstream/main
             }
         });
     }

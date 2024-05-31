@@ -49,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(new Intent(HomeActivity.this, FindDoctorActivity.class));
         });
 
+<<<<<<< HEAD
         // Menambahkan listener untuk CardView Edit Profile
         findViewById(R.id.cardEditProfile).setOnClickListener(v -> {
             Intent editIntent = new Intent(HomeActivity.this, EditProfileActivity.class);
@@ -73,5 +74,49 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         // Implementasikan listener untuk CardView lainnya secara serupa
+=======
+        CardView labTest = findViewById(R.id.cardLabTest);
+        labTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,LabTestActivity.class));
+            }
+        });
+
+        // Menambahkan kode untuk membuka EditProfileActivity
+        CardView editProfile = findViewById(R.id.cardEditProfile);
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent editIntent = new Intent(HomeActivity.this, EditProfileActivity.class);
+                editIntent.putExtra("username", username);
+                startActivity(editIntent);
+            }
+        });
+
+        CardView orderDetails = findViewById(R.id.cardOrderDetails);
+        orderDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,OrderDetailsActivity.class));
+            }
+        });
+
+        CardView buyMedicine = findViewById(R.id.cardBuyMedicine);
+        buyMedicine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,BuyMedicineActivity.class));
+            }
+        });
+
+        CardView health = findViewById(R.id.cardHealthDoctor);
+        health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,HealthArticlesActivity.class));
+            }
+        });
+>>>>>>> upstream/main
     }
 }

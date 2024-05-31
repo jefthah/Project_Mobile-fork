@@ -36,7 +36,11 @@
     <!-- Email Label -->
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/editTextFullName"
+=======
+        android:id="@+id/editTextBMBFullName"
+>>>>>>> upstream/main
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
@@ -82,13 +86,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/editTextFullName" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBFullName" />
+>>>>>>> upstream/main
 
     <!-- Password Input -->
 
     <!-- Confirm Password Label -->
     <EditText
+<<<<<<< HEAD
         android:id="@+id/editTextpincode"
+=======
+        android:id="@+id/editTextBMBpincode"
+>>>>>>> upstream/main
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -127,14 +139,25 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
         android:textColorHint="@color/hint_text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/editTextpincode" />
 
     <Button
         android:id="@+id/buttonBooking"
+=======
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBpincode" />
+
+    <Button
+        android:id="@+id/buttonBMBBooking"
+>>>>>>> upstream/main
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"

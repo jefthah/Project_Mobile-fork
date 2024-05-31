@@ -25,7 +25,11 @@
         android:id="@+id/textViewBMBPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Dimohon untuk mengisi seluruh detail pemesanan"
+=======
+        android:text="dimohon untuk mengisi seluruh detail pemesanan"
+>>>>>>> upstream/main
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:layout_marginStart="20dp"
@@ -33,6 +37,11 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="8dp" />
 
+<<<<<<< HEAD
+=======
+    <!-- Email Label -->
+
+>>>>>>> upstream/main
     <EditText
         android:id="@+id/editTextBMBFullName"
         android:layout_width="382dp"
@@ -55,6 +64,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName" />
 
+<<<<<<< HEAD
+=======
+    <!-- Email Input -->
+
+    <!-- Password Label -->
+
+>>>>>>> upstream/main
     <EditText
         android:id="@+id/editTextBMBAddress"
         android:layout_width="382dp"
@@ -65,20 +81,36 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Alamat"
+<<<<<<< HEAD
         android:inputType="text"
+=======
+        android:inputType="textEmailAddress"
+>>>>>>> upstream/main
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
         android:textColorHint="@color/hint_text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextBMBFullName" />
 
+<<<<<<< HEAD
     <EditText
         android:id="@+id/editTextBMBBpincode"
+=======
+    <!-- Password Input -->
+
+    <!-- Confirm Password Label -->
+    <EditText
+        android:id="@+id/editTextBMBpincode"
+>>>>>>> upstream/main
         android:layout_width="382dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -87,7 +119,11 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Kode Pin"
+<<<<<<< HEAD
         android:inputType="text"
+=======
+        android:inputType="textPassword"
+>>>>>>> upstream/main
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -99,6 +135,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextBMBAddress" />
 
+<<<<<<< HEAD
+=======
+    <!-- Confirm Password Input -->
+
+>>>>>>> upstream/main
     <EditText
         android:id="@+id/editTextBMBContactNumber"
         android:layout_width="382dp"
@@ -109,20 +150,35 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Nomor Kontak"
+<<<<<<< HEAD
         android:inputType="text"
+=======
+        android:inputType="textPassword"
+>>>>>>> upstream/main
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
         android:textColorHint="@color/hint_text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/editTextBMBBpincode" />
 
     <Button
         android:id="@+id/buttonBMBBBooking"
+=======
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBpincode" />
+
+    <Button
+        android:id="@+id/buttonBMBBooking"
+>>>>>>> upstream/main
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
@@ -133,4 +189,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextBMBContactNumber" />
 
+<<<<<<< HEAD
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> upstream/main

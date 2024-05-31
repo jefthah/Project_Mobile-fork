@@ -10,9 +10,12 @@ import android.widget.SimpleAdapter;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+=======
+>>>>>>> upstream/main
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,15 +43,25 @@ public class LabTestActivity extends AppCompatActivity {
     SimpleAdapter sa;
     Button btnGoToCart, btnBack;
     ListView listView;
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_lab_test);
 
+<<<<<<< HEAD
         btnGoToCart = findViewById(R.id.buttonGoToCart);
         btnBack = findViewById(R.id.buttonLTBack);
         listView = findViewById(R.id.listViewDD);
+=======
+        btnGoToCart = findViewById(R.id.buttonLTGoToCart);
+        btnBack = findViewById(R.id.buttonLTBack);
+        listView = findViewById(R.id.listViewOD);
+>>>>>>> upstream/main
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +69,10 @@ public class LabTestActivity extends AppCompatActivity {
                 startActivity(new Intent(LabTestActivity.this, HomeActivity.class));
             }
         });
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
         list = new ArrayList<>();
         for (int i = 0; i < packages.length; i++) {
             item = new HashMap<>();
@@ -82,10 +99,19 @@ public class LabTestActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/main
         btnGoToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LabTestActivity.this,CartLabActivity.class));
             }
         });
+<<<<<<< HEAD
 }}
+=======
+    }
+}
+>>>>>>> upstream/main
