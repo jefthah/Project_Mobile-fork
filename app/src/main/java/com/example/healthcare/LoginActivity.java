@@ -4,55 +4,84 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginActivity extends AppCompatActivity {
-    EditText edUsername, edPassword;
+    EditText edEmail, edPassword;
     Button btn;
-    TextView tv;
+    TextView tv, tvForgotPassword;
+    Database db;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        edUsername = findViewById(R.id.editTextUsername);
+        edEmail = findViewById(R.id.editTextEmail);
         edPassword = findViewById(R.id.editTextPassword);
         btn = findViewById(R.id.buttonLogin);
-        tv = findViewById(R.id.textViewNewUser);
+        tv = findViewById(R.id.buttonRegister);
+        tvForgotPassword = findViewById(R.id.textViewForgotPassword);
+        db = new Database();
+        auth = FirebaseAuth.getInstance();
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = edUsername.getText().toString();
-                String password = edPassword.getText().toString();
-                Database db = new Database(getApplicationContext(), "healthcare", null, 1);
-                if(username.length()==0 || password.length()==0) {
-                    Toast.makeText(getApplicationContext(),"Please fill all the details",Toast.LENGTH_SHORT).show();
-                }else {
-                    if (db.login(username,password)==1){
-                        Toast.makeText(getApplicationContext(),"Login Berhasil",Toast.LENGTH_SHORT).show();
+        btn.setOnClickListener(v -> {
+            String email = edEmail.getText().toString();
+            String password = edPassword.getText().toString();
+
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Please fill all the details", Toast.LENGTH_SHORT).show();
+            } else {
+                db.login(email, password, new Database.DatabaseCallback() {
+                    @Override
+                    public void onSuccess() {
+                        // Ambil username dari email (misalnya, bagian sebelum '@')
+                        String username = email.split("@")[0];
+
+                        Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
                         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString("username", username);
+                        editor.putString("email", email);
+                        editor.putString("username", username); // Simpan username
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                    } else {
-                        Toast.makeText(getApplicationContext(),"username atau password salah",Toast.LENGTH_SHORT).show();
+
+                        // Sertakan username dalam Intent
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        intent.putExtra("USERNAME", username);
+                        startActivity(intent);
                     }
-                }
+
+                    @Override
+                    public void onFailure(Exception e) {
+                        Toast.makeText(getApplicationContext(), "Email atau password salah", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
-        tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+        tv.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
+
+        tvForgotPassword.setOnClickListener(v -> {
+            String email = edEmail.getText().toString();
+            if (email.isEmpty()) {
+                Toast.makeText(LoginActivity.this, "Please enter your email to reset password", Toast.LENGTH_SHORT).show();
+            } else {
+                auth.sendPasswordResetEmail(email)
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(LoginActivity.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(LoginActivity.this, "Failed to send reset email", Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
     }

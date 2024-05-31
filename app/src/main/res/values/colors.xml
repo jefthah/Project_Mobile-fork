@@ -3,10 +3,10 @@
     <color name="blue_200">#E1F7F5</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_200">#16DF8B</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="blask2">#1c1d21</color>
+    <color name="black2">#1c1d20</color>
     <color name="button_login">#986cdf</color>
     <color name="colorPrimaryDark">#0E46A3</color>
     <color name="colorBlack">#000000</color>

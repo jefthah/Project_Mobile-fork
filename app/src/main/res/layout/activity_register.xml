@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
+    android:background="@drawable/background"
     tools:context=".RegisterActivity">
 
     <TextView
@@ -43,7 +43,7 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="20dp" />
 
     <!-- Username Input -->
@@ -179,10 +179,10 @@
         android:id="@+id/buttonRegister"
         android:layout_width="321dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_bg"
-        android:backgroundTint="@color/teal_200"
         android:text="Register"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRegisterConfirmPassword" />

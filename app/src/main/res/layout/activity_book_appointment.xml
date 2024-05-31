@@ -36,12 +36,10 @@
         android:id="@+id/buttonAppBack"
         android:layout_width="321dp"
         android:layout_height="48dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="180dp"
         android:background="@drawable/btn_bg"
-        android:backgroundTint="@color/teal_200"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAppFees" />
 
@@ -212,13 +210,12 @@
         app:layout_constraintTop_toBottomOf="@+id/labelConfirmPassword" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonBookAppointment"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:layout_marginTop="116dp"
         android:background="@drawable/btn_bg"
-        android:backgroundTint="@color/teal_200"
-        android:text="Register"
+        android:text="Book Appointment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAppFees" />
